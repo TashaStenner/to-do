@@ -1,0 +1,30 @@
+.buttonStyle {
+}
+.primary {
+  padding: 4px;
+  border-radius: 5px;
+  background-color: #800080;
+  color: #ffffff;
+  font-size: 16px;
+  border: 2px solid white;
+
+  :hover {
+    background-color: #ffffff;
+    color: #800080;
+    border: 2px solid #800080;
+  }
+}
+.secondary {
+  padding: 4px;
+  border-radius: 5px;
+  background-color: #00805a;
+  color: #ffffff;
+  font-size: 16px;
+  border: 2px solid #ffffff;
+
+  :hover {
+    background-color: #ffffff;
+    color: #00805a;
+    border: 2px solid #00805a;
+  }
+}

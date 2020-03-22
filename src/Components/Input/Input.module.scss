@@ -1,0 +1,17 @@
+@import "../../variables.module.scss";
+
+.addNew {
+    background-color: pink;
+    border-radius: 15px;
+
+    input {
+        height: 5vh;
+        width: 80vw;
+        margin: $base-spacing;
+        border-radius: 5px; 
+
+    }
+
+   
+
+}
