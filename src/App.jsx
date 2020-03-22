@@ -15,17 +15,20 @@ function App() {
 
   return (
     <>
+      <h1>My To Do's:</h1>
+        <div className={styles.add}>
+          <Button
+            handleClick={() => unHideItems(toggleInput)}
+            text={"Add New To Do"}
+            isPrimary={true}
+          />
+        </div>
       <div className={`${hidden}`}>
         <Input />
       </div>
-      <CardList />
-      <div>
-        <Button
-          handleClick={() => unHideItems(toggleInput)}
-          text={"Add New To Do"}
-          isPrimary={true}
-        />
-      </div>
+      <section className={styles.dashboard}>
+        <CardList />
+      </section>
     </>
   );
 }

@@ -46,6 +46,7 @@ const CardList = () => {
 
   return (
     <>
+    <section className={styles.toDo}>
       {toDoList.map(toDo => (
         <>
           <Card
@@ -58,6 +59,8 @@ const CardList = () => {
           />
         </>
       ))}
+      <h2>Click to Complete</h2>
+      </section>
     </>
   );
 };

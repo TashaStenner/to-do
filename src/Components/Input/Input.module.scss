@@ -9,9 +9,21 @@
         width: 80vw;
         margin: $base-spacing;
         border-radius: 5px; 
-
+        background-color: white;
     }
 
-   
-
+    button {
+        background-color: grey;
+        width: 100%;
+    }
 }
+
+@media only screen and (min-width: 768px) {
+    .addNew {
+        width: 90vw;
+        margin: $base-spacing auto 0 auto;
+        border: 2px solid black;
+        padding: $base-spacing;
+    }
+   
+   }

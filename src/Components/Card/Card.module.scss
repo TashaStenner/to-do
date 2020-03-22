@@ -1,29 +1,44 @@
 @import "../../variables.module.scss";
 
 .list {
-  height: 80vh;
-  width: 100vw;
+  height: 100%;
   background-image: url(../../Assests/clipboard-clip-art-png.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-position: left;
   border: 2px solid transparent;
   overflow: visible;
+  margin-top: $base-spacing;
+ 
+  .complete{
+    background-image: url(../../Assests/done.png);
+    height: 50%;
+    width: 30%;
+  }
+
+  .incomplete{
+    background-color: transparent;
+  }
 
   .data {
     position: relative;
-    height: 80%;
+    height: 65%;
     width: 90%;
-    margin: $base-spacing * 9 auto 0 auto;
+    margin: $base-spacing * 13 auto 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: transparent;
+
+    h2, h3, p {
+      background-color: transparent;
+    }
+   
 
     h2 {
       font-size: 2rem;
-      margin:0;
+      margin: 0;
     }
-
 
     img {
       height: 30%;
@@ -32,8 +47,96 @@
     }
 
     button {
-      margin: $base-spacing;
       border-radius: 5px;
     }
   }
 }
+
+
+@media only screen and (min-width: 375px) {
+  .list {
+    height: 100%;
+    margin-bottom: $base-spacing * 2;
+  
+    .data {
+      height: 100%;
+      margin: $base-spacing * 10 auto 0 auto;
+  
+      h2, h3, p {
+        margin-bottom: $base-spacing;
+      }
+  
+      img {
+        margin: $base-spacing;
+      }
+    }
+  }
+  
+}
+
+@media only screen and (min-width: 425px) {
+  .list {
+    height: 100%;
+    margin: 0;
+  
+    .data {
+      margin: $base-spacing * 12 auto 0 auto;
+    }
+  }
+  
+  
+}
+
+@media only screen and (min-width: 768px) {
+ .list {
+    height: 60%;
+    width: 20%;
+    background-size: contain;    
+     
+    .data {
+      width: 90%;
+      height: 70%;
+      margin: $base-spacing * 8 auto 0 auto;
+
+      h2, h3, p , .img , button{
+        font-size: smaller;
+        margin: 0;
+        text-align: center;
+      }
+
+      img{
+        height: 15%;
+        width: 30%;
+        margin-bottom: $base-spacing * 2;
+      }
+    }
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+  .list {
+     height: 60%;
+     width: 20%;
+     background-size: contain;    
+      
+     .data {
+       width: 90%;
+       height: 70%;
+       margin: $base-spacing * 13 auto 0 auto;
+ 
+       h2, h3, p , .img , button{
+         font-size: smaller;
+         margin: 0;
+         text-align: center;
+       }
+ 
+       img{
+         height: 15%;
+         width: 30%;
+         margin-bottom: $base-spacing * 2;
+       }
+     }
+   }
+ 
+ }

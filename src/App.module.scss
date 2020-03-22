@@ -1,12 +1,70 @@
 @import url("https://fonts.googleapis.com/css?family=Indie+Flower&display=swap");
+@import "./variables.module.scss";
 
 * {
   font-family: "Indie Flower", cursive;
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #bb8a55;
+}
+
+h1 {
+  text-align: center;
+  border: 2px solid black;
+  width: 90%;
+  margin: $base-spacing auto;
+  text-decoration: underline;
+  background-color: white;
 }
 
 .hide {
   display: none;
 }
+
 .unHide {
   display: unset;
+  margin: auto;
+  z-index: 1;
 }
+
+.dashboard {
+  height: 80vh;
+  width: 100vw;
+  margin: 0 auto; 
+  display: flex;
+  flex-direction: column;
+
+}
+
+  .add {
+    margin: 0 auto;
+    width: 90vw;
+ 
+  }
+  @media only screen and (min-width: 375px) {
+  
+    .dashboard {
+      margin: $base-spacing 0;
+      height: 90vh;
+    
+    }
+  }
+
+@media only screen and (min-width: 425px) {
+  
+  .dashboard {
+    height: 95vh;
+    width: 90vw;
+    margin: 0 auto;
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  
+  .dashboard {
+    flex-direction: row; 
+  }
+}
+

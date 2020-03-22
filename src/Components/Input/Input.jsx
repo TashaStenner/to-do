@@ -1,6 +1,7 @@
 import styles from "./Input.module.scss";
 import React, { useState, useEffect } from "react";
 import { firestore } from "../../firebase";
+import Button from "../Button";
 
 const Input = () => {
   const [toDoTitle, setToDoTitle] = useState("");
@@ -20,6 +21,7 @@ const Input = () => {
       .get()
       .then(doc => {
         const todo = doc.data();
+        fetchtoDoList()
       });
   };
 
@@ -73,7 +75,8 @@ const Input = () => {
           placeholder="Go on, give it a pic (URL only though please)"
           onInput={event => settoDoImageRef(event.target.value)}
         />
-        <button onClick={addNewDoc}>Add</button>
+        <Button handleClick={addNewDoc} text={"Add"} isPrimary={true}/>
+        {/* <button onClick={addNewDoc}>Add</button> */}
       </section>
     </>
   );
