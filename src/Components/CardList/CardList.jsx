@@ -6,7 +6,6 @@ import { firestore } from "../../firebase";
 const CardList = () => {
   const [toDoList, SetToDoList] = useState([]);
 
-
   useEffect(() => {
     fetchtoDoList();
   }, []);
@@ -59,7 +58,7 @@ const CardList = () => {
           />
         </>
       ))}
-      <h2>Click to Complete</h2>
+      <h2 className={styles.complete}>Click to Complete</h2>
       </section>
     </>
   );

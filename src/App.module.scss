@@ -3,9 +3,12 @@
 
 * {
   font-family: "Indie Flower", cursive;
-  margin: 0; 
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   background-color: #bb8a55;
 }
 
@@ -31,28 +34,23 @@ h1 {
 .dashboard {
   height: 80vh;
   width: 100vw;
-  margin: 0 auto; 
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-
 }
 
-  .add {
-    margin: 0 auto;
-    width: 90vw;
- 
+.add {
+  margin: 0 auto;
+  width: 90vw;
+}
+@media only screen and (min-width: 375px) {
+  .dashboard {
+    margin: $base-spacing 0;
+    height: 90vh;
   }
-  @media only screen and (min-width: 375px) {
-  
-    .dashboard {
-      margin: $base-spacing 0;
-      height: 90vh;
-    
-    }
-  }
+}
 
 @media only screen and (min-width: 425px) {
-  
   .dashboard {
     height: 95vh;
     width: 90vw;
@@ -60,11 +58,8 @@ h1 {
   }
 }
 
-
 @media only screen and (min-width: 768px) {
-  
   .dashboard {
-    flex-direction: row; 
+    flex-direction: row;
   }
 }
-

@@ -24,6 +24,7 @@ const Card = props => {
           <img src={image} alt={image} />
           <Button handleClick={handleClick} text={"Delete"} isPrimary={false} />
         </div>
+        
       </section>
     </>
   );

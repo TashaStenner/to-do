@@ -5,24 +5,24 @@ import CardList from "./Components/CardList";
 import Button from "./Components/Button";
 
 function App() {
-  const [toggleInput, SetToggleInput] = useState(true);
-
+  const [toggleInput, setToggleInput] = useState(true);
+  const [updateToDo, setUpdateToDo] = useState(false);
   const hidden = toggleInput ? styles.hide : styles.unHide;
 
   const unHideItems = toggleInput => {
-    SetToggleInput(!toggleInput);
+    setToggleInput(!toggleInput);
   };
 
   return (
     <>
       <h1>My To Do's:</h1>
-        <div className={styles.add}>
-          <Button
-            handleClick={() => unHideItems(toggleInput)}
-            text={"Add New To Do"}
-            isPrimary={true}
-          />
-        </div>
+      <div className={styles.add}>
+        <Button
+          handleClick={() => unHideItems(toggleInput)}
+          text={"Add New To Do"}
+          isPrimary={true}
+        />
+      </div>
       <div className={`${hidden}`}>
         <Input />
       </div>

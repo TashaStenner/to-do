@@ -3,27 +3,29 @@ import React, { useState, useEffect } from "react";
 import { firestore } from "../../firebase";
 import Button from "../Button";
 
-const Input = () => {
+const Input = (props) => {
+  const {update} = props;
   const [toDoTitle, setToDoTitle] = useState("");
   const [toDoAuthor, settoDoAuthor] = useState("");
   const [toDoCreationDate, settoDoCreationDate] = useState("");
   const [toDoCompletionDate, settoDoCompletionDate] = useState("");
   const [toDoImageRef, settoDoImageRef] = useState("");
+  // const [refresh, setRefresh] = useState("");
 
-  useEffect(() => {
-    fetchtoDoList();
-  }, []);
+  // useEffect(() => {
+  //   fetchtoDoList();
+  // }, []);
 
-  const fetchtoDoList = () => {
-    firestore
-      .collection("toDoList")
-      .doc()
-      .get()
-      .then(doc => {
-        const todo = doc.data();
-        fetchtoDoList()
-      });
-  };
+  // const fetchtoDoList = () => {
+  //   firestore
+  //     .collection("toDoList")
+  //     .doc()
+  //     .get()
+  //     .then(doc => {
+  //       const todo = doc.data();
+     
+  //     });
+  // };
 
   const addNewDoc = () => {
     const newDoc = {
@@ -38,7 +40,7 @@ const Input = () => {
       .collection("toDoList")
       .add(newDoc)
       .then(() => {
-        fetchtoDoList();
+        
       })
       .catch(err => {
         console.log(err);
@@ -76,7 +78,6 @@ const Input = () => {
           onInput={event => settoDoImageRef(event.target.value)}
         />
         <Button handleClick={addNewDoc} text={"Add"} isPrimary={true}/>
-        {/* <button onClick={addNewDoc}>Add</button> */}
       </section>
     </>
   );
